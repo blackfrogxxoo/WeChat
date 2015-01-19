@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+
+    <headers>
+
+        <updatetime>
+        </updatetime>
+    </headers>
+
+    <frommsg>
+
+        <item>
+
+            <fromid id="admin" />
+
+            <msg />
+
+            <time>
+            </time>
+        </item>
+
+        <item>
+
+            <fromid id="admin" />
+
+            <msg>
+你好，在干嘛啊？
+            </msg>
+
+            <time>
+            </time>
+        </item>
+    </frommsg>
+
+    <tomsg>
+
+        <item>
+
+            <toid id="guest" />
+
+            <msg />
+
+            <time>
+            </time>
+        </item>
+    </tomsg>
+
+</messages>

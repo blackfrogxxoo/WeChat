@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tab_icon_width">38dp</dimen>
+    <dimen name="tab_icon_height">32dp</dimen>
+    <dimen name="chat_item_height">60dp</dimen>
+    <dimen name="chat_icon_height">40dp</dimen>
+    <dimen name="date_text_size">11dp</dimen>
+    <dimen name="tab_text_size">13dp</dimen>
+    <dimen name="contact_text_size">16dp</dimen>
+    <dimen name="tab_notify">8dp</dimen>
+    <dimen name="tab_notify_number">18dp</dimen>
+    <dimen name="tab_notify_to_left">36dp</dimen>
+    <dimen name="tab_notify_num_to_left">29dp</dimen>
+    <dimen name="chat_magin">10dp</dimen>
+    <dimen name="sin_line">2px</dimen>
+    <dimen name="tab_padding_left">26dp</dimen>
+    <dimen name="tab_padding_right">19dp</dimen>
+    
+</resources>

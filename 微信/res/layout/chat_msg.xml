@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/chat_item_height" >
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="@dimen/chat_item_height"
+        android:layout_height="@dimen/chat_item_height" >
+
+        <ImageView
+            android:id="@+id/head_icon"
+            android:layout_width="@dimen/chat_icon_height"
+            android:layout_height="@dimen/chat_icon_height"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_item_height"
+        android:layout_toRightOf="@id/icon_container" >
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/chat_magin"
+            android:text="昵称"
+            android:textSize="@dimen/contact_text_size" />
+
+        <TextView
+            android:id="@+id/simple_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/contact_name"
+            android:layout_marginBottom="@dimen/chat_magin"
+            android:singleLine="true"
+            android:text="消息"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/tab_text_size" />
+
+        <TextView
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/chat_magin"
+            android:layout_marginTop="@dimen/chat_magin"
+            android:singleLine="true"
+            android:text="昨天"
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/date_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sin_line"
+        android:layout_alignParentBottom="true"
+        android:background="#dddddd" />
+
+</RelativeLayout>

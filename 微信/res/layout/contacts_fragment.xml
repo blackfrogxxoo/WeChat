@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    tools:context="org.wxc.fuckwechat.activity.MainActivity" >
+
+    <org.wxc.fuckwechat.views.WXContactItem
+        android:id="@+id/ci_newFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <org.wxc.fuckwechat.views.WXContactItem
+        android:id="@+id/ci_chats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ci_newFriend" />
+
+    <org.wxc.fuckwechat.views.WXContactItem
+        android:id="@+id/ci_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ci_chats" />
+
+    <org.wxc.fuckwechat.views.WXContactItem
+        android:id="@+id/ci_publics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ci_tags" />
+
+    <ImageView
+        android:id="@+id/iv_loli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ci_chats" />
+
+</RelativeLayout>

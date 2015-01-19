@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f0" >
+
+    <ImageView
+        android:id="@+id/iv_tabicon"
+        android:layout_width="@dimen/tab_icon_width"
+        android:layout_height="@dimen/tab_icon_height" />
+
+    <ImageView
+        android:id="@+id/iv_tabicon_pressed"
+        android:layout_width="@dimen/tab_icon_width"
+        android:layout_height="@dimen/tab_icon_height" />
+
+    <RelativeLayout
+        android:id="@+id/text_container"
+        android:layout_width="@dimen/tab_icon_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_tabicon" >
+
+        <TextView
+            android:id="@+id/tv_tabicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:text="微信"
+            android:textSize="@dimen/tab_text_size" />
+        <TextView
+            android:id="@+id/tv_tabicon_pressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:text="微信"
+            android:textColor="#008000"
+            android:textSize="@dimen/tab_text_size" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_notify_num"
+        android:layout_width="@dimen/tab_notify_number"
+        android:layout_height="@dimen/tab_notify_number"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/tab_notify_num_to_left" />
+
+    <ImageView
+        android:id="@+id/iv_notify"
+        android:layout_width="@dimen/tab_notify"
+        android:layout_height="@dimen/tab_notify"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/tab_notify_to_left" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/chat_item_height" >
+
+    <RelativeLayout
+        android:id="@+id/rl_my_info_icon"
+        android:layout_width="@dimen/chat_item_height"
+        android:layout_height="@dimen/chat_item_height" >
+
+        <ImageView
+            android:id="@+id/iv_my_info_icon"
+            android:layout_width="@dimen/chat_icon_height"
+            android:layout_height="@dimen/chat_icon_height"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/chat_item_height"
+        android:layout_toRightOf="@id/rl_my_info_icon" >
+
+        <TextView
+            android:id="@+id/tv_my_info_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/chat_magin"
+            android:text="我的名字"
+            android:textSize="@dimen/contact_text_size" />
+
+        <TextView
+            android:id="@+id/tv_my_info_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/tv_my_info_name"
+            android:layout_marginBottom="@dimen/chat_magin"
+            android:singleLine="true"
+            android:text="微信号："
+            android:textColor="#aaaaaa"
+            android:textSize="@dimen/tab_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>
