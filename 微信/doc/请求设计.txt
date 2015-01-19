@@ -1,0 +1,52 @@
+请求主要以xml字符串封装传递，响应也由xml封装。
+但有一些请求需要频繁刷新，如查看未读信息、查看好友请求（可封装在一起，非好友发送的消息为验证信息），故用get
+请求主要分为：一般请求（不用带用户名和密码）、私密请求（须有用户名和密码）
+私密请求又包括：
+	账号请求（2开头）
+	聊天请求（3开头）
+	好友请求（4开头）
+	资料请求（5开头）
+	社交请求（6开头）
+	功能请求（7开头）
+
+一般请求标识为1开头的4位数，如测试与服务器的连接（1000），私密请求为2开头的4位数，如注册请求（2001）
+
+请求标识	请求名称		请求方式		主要参数（内容）		目标Servlet			响应类型或内容					
+------------------------------------------------------------------------------------------------------
+1000	测试连接		get			无				DefaultServlet		成功、未连网、忙
+	
+2001	注册			post		号密				RegisterServlet		成功、重复、忙
+2002	登陆			post		号密				LoginServlet		成功、号密错、忙
+2003	忘记密码		post		号				LostFindServlet		身份验证问题、号错、忙
+
+3001	读取消息		get			号密				RefreshMsgServlet	消息、空、忙
+3002	发送消息		post		号密，msg,toid	ChatServlet			成功、非好友、忙
+
+4000	刷新列表		get			号密				GetContactsServlet	列表、忙	
+4001	添加好友		post		号密，toid		GetFriendServlet	已提交、已添加（对方设置自动添加）、忙
+4002	好友请求		get			号密				FriendReqServlet	请求者信息、忙
+4003	帐号查找		post		号密，部分或完整账号	SearchIDServlet		用户列表（可能为空）、忙
+4004	昵称查找		post		号密，部分或完整昵称	SearchNameServlet	用户列表（可能为空）、忙
+4005	附近的人		post		号密，位置信息，筛选	SearchNearServlet	用户列表、忙
+4006	设置加好友		post		号密，好友权限		AddPermissionServlet成功、忙
+4007	删除好友		post		号密，toid		DeleteFriendServlet	成功（刷新好友）、忙
+
+5001	修改昵称		post		号密，昵称			SetNameServlet		成功、忙
+5002	修改头像		post		号密，图片			SetIconServlet		成功、忙、自动压缩图片
+5003	修改性别		post		号密，性别			SetSexServlet		成功、忙
+5004	修改地区		post		号密，地区			SetCityServlet		成功、忙
+5005	修改个性签名	post		号密，个性签名		SetSignServlet		成功、忙
+5006	查看资料		post		号密，toid		GetInfoServlet		资料详情、忙
+
+6001	发表状态		post		号密，内容，图片		ShowMeServlet		生成状态、忙
+6002	分享链接		post		号密，链接			ShareWebsiteServlet	生成状态、忙
+6003	刷新朋友圈		get			号密				RefreshFriServlet	状态列表、忙
+6004	查看详情		post		号密，状态标识		ShowYouServlet		状态详情、忙
+6005	屏蔽某人		post		号密，toid		NotLookServlet		成功（刷新朋友圈）、忙
+
+7001	摇一摇		post		号密，位置			ShakeServlet		成功、忙
+7002	摇匹配		post		号密				ShakeMatchServlet	摇到的人、无、忙
+7003	扔瓶子		post		号密，位置，内容		SetBottleServlet	成功、忙
+7004	捞瓶子		post		号密，位置			GetBottleServlet	瓶子、海星、忙
+7005	查看瓶子		post		号密，瓶子标识		LookBottleServlet	瓶子详情、忙
+7006	删除瓶子		post		号密，瓶子标识		DropBottleServlet	成功、忙

@@ -6,7 +6,6 @@
 	<classpathentry kind="lib" path="libs/dom4j-1.6.1.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/appcompat_v7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/appcompat"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
